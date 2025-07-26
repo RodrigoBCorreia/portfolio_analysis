@@ -1,0 +1,5 @@
+powershell
+    .\venv\Scripts\Activate.ps1
+
+cmd
+    venv\Scripts\activate.bat
