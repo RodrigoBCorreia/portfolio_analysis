@@ -1,0 +1,93 @@
+
+<html>
+<head>
+    <title>Portfolio Optimization Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 40px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #f4f4f4; }
+        ul { list-style-type: none; padding: 0; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Optimization Report</h1>
+
+    <h2>Tickers Used</h2>
+    <p>ASML, AMZN, GOOGL, MSFT, PANW, BKNG, RACE, COST, MA, V, AVGO, UNH</p>
+
+    <h2>Parameters</h2>
+    <ul>
+        <li><strong>Start Date:</strong> 2021-01-01</li>
+        <li><strong>End Date:</strong> 2025-07-01</li>
+        <li><strong>Number of Portfolios Simulated:</strong> 25000</li>
+        <li><strong>Risk-Free Rate:</strong> 2.40%</li>
+    </ul>
+
+    <h2>Top Portfolios</h2>
+    
+    <h3>Minimum Risk Portfolio</h3>
+    <p><strong>Return:</strong> 0.1505</p>
+    <p><strong>Risk:</strong> 0.1802</p>
+    <p><strong>Sharpe Ratio:</strong> 0.7021</p>
+    <p><strong>Weights:</strong></p>
+    <table><tr><th>ASML</th><th>AMZN</th><th>GOOGL</th><th>MSFT</th><th>PANW</th><th>BKNG</th><th>RACE</th><th>COST</th><th>MA</th><th>V</th><th>AVGO</th><th>UNH</th></tr><tr><td>0.026</td><td>0.003</td><td>0.014</td><td>0.124</td><td>0.036</td><td>0.03</td><td>0.084</td><td>0.202</td><td>0.106</td><td>0.131</td><td>0.043</td><td>0.203</td></tr></table>
+    <hr>
+    
+    
+    <h3>Highest Return Portfolio</h3>
+    <p><strong>Return:</strong> 0.2483</p>
+    <p><strong>Risk:</strong> 0.2398</p>
+    <p><strong>Sharpe Ratio:</strong> 0.9355</p>
+    <p><strong>Weights:</strong></p>
+    <table><tr><th>ASML</th><th>AMZN</th><th>GOOGL</th><th>MSFT</th><th>PANW</th><th>BKNG</th><th>RACE</th><th>COST</th><th>MA</th><th>V</th><th>AVGO</th><th>UNH</th></tr><tr><td>0.004</td><td>0.056</td><td>0.096</td><td>0.087</td><td>0.137</td><td>0.075</td><td>0.039</td><td>0.088</td><td>0.101</td><td>0.022</td><td>0.263</td><td>0.031</td></tr></table>
+    <hr>
+    
+    
+    <h3>Highest Sharpe Ratio Portfolio</h3>
+    <p><strong>Return:</strong> 0.2365</p>
+    <p><strong>Risk:</strong> 0.2178</p>
+    <p><strong>Sharpe Ratio:</strong> 0.9758</p>
+    <p><strong>Weights:</strong></p>
+    <table><tr><th>ASML</th><th>AMZN</th><th>GOOGL</th><th>MSFT</th><th>PANW</th><th>BKNG</th><th>RACE</th><th>COST</th><th>MA</th><th>V</th><th>AVGO</th><th>UNH</th></tr><tr><td>0.005</td><td>0.025</td><td>0.006</td><td>0.164</td><td>0.09</td><td>0.123</td><td>0.127</td><td>0.141</td><td>0.013</td><td>0.084</td><td>0.189</td><td>0.033</td></tr></table>
+    <hr>
+    
+
+    <h2>Efficient Frontier Plot</h2>
+    <img src="portfolio_plot.png" width="800">
+
+    <h2>Monte Carlo Simulations</h2>
+    <p>Each plot below shows <strong>5000</strong> simulated future paths of the portfolio's value over <strong>5</strong> years, based on historical return and volatility. The bold black curve represents the average expected growth. The dashed gray line marks the initial investment. A red dot shows the final average value at the end of the period.</p>
+
+    <h3>Minimum Risk Portfolio</h3>
+    <img src="Minimum_Risk_monte_carlo.png" width="800">
+
+    <h3>Highest Return Portfolio</h3>
+    <img src="Highest_Return_monte_carlo.png" width="800">
+
+    <h3>Highest Sharpe Ratio Portfolio</h3>
+    <img src="Highest_Sharpe_Ratio_monte_carlo.png" width="800">
+
+
+    <hr>
+
+    <h2>Final Portfolio Value Distributions</h2>
+    <p>The histograms below show the distribution of ending values across all Monte Carlo simulations. Key statistical markers are shown:</p>
+    <ul>
+      <li><strong>Red dashed line</strong>: Mean final value</li>
+      <li><strong>Green dotted line</strong>: Median final value</li>
+      <li><strong>Gray dash-dot lines</strong>: 5th and 95th percentiles</li>
+    </ul>
+
+    <h3>Minimum Risk Portfolio</h3>
+    <img src="Minimum_Risk_distribution.png" width="800">
+
+    <h3>Highest Return Portfolio</h3>
+    <img src="Highest_Return_distribution.png" width="800">
+
+    <h3>Highest Sharpe Ratio Portfolio</h3>
+    <img src="Highest_Sharpe_Ratio_distribution.png" width="800">
+
+</body>
+</html>
